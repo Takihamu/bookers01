@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <title>Bookers</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,6 +11,11 @@
   </head>
 
   <body>
+    <% if flash[:success] %>
+          <div class="alert alert-success">
+            <%= flash[:success] %>
+          </div>
+        <% end %>
     <%= yield %>
   </body>
 </html>
